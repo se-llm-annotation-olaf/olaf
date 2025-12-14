@@ -1,9 +1,3 @@
-
----
-
-## 3. `index.md` (GitHub Pages Home)
-
-```markdown
 ---
 layout: default
 title: OLAF Framework
