@@ -64,3 +64,12 @@ OLAF assumes constrained stability of LLMs and acknowledges limitations posed by
 
 ## Reference
 If you use OLAF, please cite the paper.
+
+```bibtex
+@inproceedings{imran2025olaf,
+  title={OLAF: Towards Robust LLM-Based Annotation Framework in Empirical Software Engineering},
+  author={Imran, Mia Mohammad and Zaman, Tarannum Shaila},
+  booktitle={Proceedings of the 3rd IEEE/ACM International Workshop on Methodological Issues with Empirical Studies in Software Engineering (WSESE)},
+  year={2026}
+}
+```
