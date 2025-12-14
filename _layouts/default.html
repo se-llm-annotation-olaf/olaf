@@ -2,35 +2,108 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>{{ page.title }} | {{ site.title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="{{ site.description }}">
 
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <title>
+    {% if page.title %}
+      {{ page.title }} · {{ site.title }}
+    {% else %}
+      {{ site.title }}
+    {% endif %}
+  </title>
+
+  <meta name="description"
+        content="{{ page.description | default: site.description | strip_html | truncate: 160 }}">
+
+  <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
 </head>
 
-<body>
+<!-- body class enables section-specific sidebar colors -->
+<body class="{{ page.section }}">
+
+  <!-- =====================
+       Header
+       ===================== -->
   <header class="site-header">
     <div class="container">
-      <h1 class="site-title">{{ site.title }}</h1>
-      <p class="site-description">{{ site.description }}</p>
-      <nav class="site-nav">
-        <a href="{{ '/' | relative_url }}">Home</a>
-        <a href="{{ '/README.md' | relative_url }}">Paper</a>
-      </nav>
+      <a class="site-title" href="{{ '/' | relative_url }}">
+        {{ site.title }}
+      </a>
+      <span class="site-tagline">{{ site.tagline }}</span>
     </div>
   </header>
 
-  <main class="container">
-    {{ content }}
-  </main>
+  <!-- =====================
+       Layout
+       ===================== -->
+  <div class="container layout">
 
+    <!-- Sidebar -->
+    <aside class="sidebar" aria-label="Sidebar navigation">
+      <nav class="sidebar-nav">
+        <ul>
+          <li><a href="{{ '/' | relative_url }}">Home</a></li>
+          <li><a href="{{ '/README' | relative_url }}">README</a></li>
+        </ul>
+      </nav>
+
+      {% if site.social %}
+      <div class="sidebar-divider"></div>
+
+      <nav class="sidebar-external" aria-label="External academic profiles">
+        <ul>
+          {% if site.social.google_scholar %}
+            <li>
+              <a href="{{ site.social.google_scholar }}"
+                 target="_blank" rel="noopener">
+                Google Scholar
+              </a>
+            </li>
+          {% endif %}
+          {% if site.social.orcid %}
+            <li>
+              <a href="{{ site.social.orcid }}"
+                 target="_blank" rel="noopener">
+                ORCID
+              </a>
+            </li>
+          {% endif %}
+          {% if site.social.github %}
+            <li>
+              <a href="https://github.com/{{ site.social.github }}"
+                 target="_blank" rel="noopener">
+                GitHub
+              </a>
+            </li>
+          {% endif %}
+        </ul>
+      </nav>
+      {% endif %}
+    </aside>
+
+    <!-- Main Content -->
+    <main class="site-main" role="main">
+      {% if page.title %}
+        <!-- <header class="page-header">
+          <h1>{{ page.title }}</h1>
+        </header> -->
+      {% endif %}
+
+      {{ content }}
+    </main>
+
+  </div>
+
+  <!-- =====================
+       Footer
+       ===================== -->
   <footer class="site-footer">
     <div class="container">
       <p>
-        © {{ site.time | date: "%Y" }} OLAF Project · WSESE 2025
+        © {{ site.time | date: '%Y' }} {{ site.title }}
       </p>
     </div>
   </footer>
+
 </body>
 </html>
