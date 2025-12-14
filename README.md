@@ -19,7 +19,7 @@ Workshop on Methodological Issues with Empirical Studies in Software Engineering
 
 ## Website
 This repository hosts the official project website:
-[https://<your-username>.github.io/olaf/](https://se-llm-annotation-olaf.github.io/olaf/)
+[https://se-llm-annotation-olaf.github.io/olaf/](https://se-llm-annotation-olaf.github.io/olaf/)
 
 
 ## Citation
