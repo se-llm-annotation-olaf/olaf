@@ -5,9 +5,9 @@ title: OLAF Example
 
 # OLAF Examples
 
-- [Example 1: Code Comment Annotation](#Task:-Code-Comment-Annotation)
+- [Example 1: Code Comment Annotation](#Task-Code-Comment-Annotation)
 
-# Task: Code Comment Annotation
+# Task: Code Comment Annotation {: #Task-Code-Comment-Annotation}
 
 Annotate source code comments to identify the **software engineering intent** expressed in each comment.
 
