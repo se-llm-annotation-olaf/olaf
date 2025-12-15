@@ -3,6 +3,11 @@ layout: default
 title: OLAF Framework
 ---
 
+# Paper
+**OLAF: Towards Robust LLM-Based Annotation Framework in Empirical Software Engineering**  
+Mia Mohammad Imran, Tarannum Shaila Zaman  
+Workshop on Methodological Issues with Empirical Studies in Software Engineering (WSESE), 2026
+
 # OLAF Framework
 
 ## Overview
