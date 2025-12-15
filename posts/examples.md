@@ -5,17 +5,14 @@ title: OLAF Example
 
 # OLAF Examples
 
-- [Example 1: Code Comment Annotation](#Task-Code-Comment-Annotation)
+- [Example 1: Code Comment Annotation](#task-code-comment-annotation)
 
-# Task: Code Comment Annotation {: #Task-Code-Comment-Annotation}
+# Task: Code Comment Annotation
 
 Annotate source code comments to identify the **software engineering intent** expressed in each comment.
 
 Each comment must receive **exactly one label** describing its primary purpose.
 
----
-
-## Annotation Dimension: Comment Intent
 
 Use the following label set:
 
@@ -31,8 +28,6 @@ Use the following label set:
 
 - **Indeterminate**: The intent cannot be reliably inferred from the comment alone.
 
----
-
 ## How to Do It
 
 ### Step 0: Data Collection
@@ -41,15 +36,11 @@ Use the following label set:
 - Each comment is stored with minimal context (file path, language, commit ID).
 - No labels are assigned at this stage.
 
----
-
 ### Step 1: Define the Unit of Annotation
 
 - Each **single code comment** is one annotation unit.
 - Inline and block comments are treated equally.
 - Surrounding code is used only when necessary to interpret intent.
-
----
 
 ### Step 2: Initial Human Annotation
 
@@ -61,8 +52,6 @@ Use the following label set:
 6. Resolve disagreements and finalize the annotation guidelines.
 
 This step establishes the **reference interpretation of the task**.
-
----
 
 ### Step 3: LLM Annotation and Human–Model Agreement
 
@@ -86,8 +75,6 @@ Procedure:
 
 If agreement with humans is **substantial**, proceed to scaling.
 
----
-
 ### Step 4: Scaling Annotation
 
 1. Apply both LLMs to the remaining **unlabeled comments** from the original 10,000.
@@ -98,8 +85,6 @@ If agreement with humans is **substantial**, proceed to scaling.
 4. Assign one final label per comment.
 
 This enables annotation at scale while preserving measurement consistency.
-
----
 
 ### Step 5: Transparency
 
@@ -112,7 +97,6 @@ Document:
 - Human-LLM agreement
 - Aggregation method
 
----
 
 ### Step 6: Drift Monitoring
 
