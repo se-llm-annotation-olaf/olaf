@@ -43,43 +43,12 @@
       <nav class="sidebar-nav">
         <ul>
           <li><a href="{{ '/' | relative_url }}">Home</a></li>
-          <li><a href="{{ '/README' | relative_url }}">README</a></li>
+          <li><a href="{{ '/GitHub' | https://github.com/se-llm-annotation-olaf/olaf }}">GitHub</a></li>
         </ul>
       </nav>
 
       {% if site.social %}
       <div class="sidebar-divider"></div>
-
-      <nav class="sidebar-external" aria-label="External academic profiles">
-        <ul>
-          {% if site.social.google_scholar %}
-            <li>
-              <a href="{{ site.social.google_scholar }}"
-                 target="_blank" rel="noopener">
-                Google Scholar
-              </a>
-            </li>
-          {% endif %}
-          {% if site.social.orcid %}
-            <li>
-              <a href="{{ site.social.orcid }}"
-                 target="_blank" rel="noopener">
-                ORCID
-              </a>
-            </li>
-          {% endif %}
-          {% if site.social.github %}
-            <li>
-              <a href="https://github.com/{{ site.social.github }}"
-                 target="_blank" rel="noopener">
-                GitHub
-              </a>
-            </li>
-          {% endif %}
-        </ul>
-      </nav>
-      {% endif %}
-    </aside>
 
     <!-- Main Content -->
     <main class="site-main" role="main">
